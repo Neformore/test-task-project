@@ -6,6 +6,7 @@ import com.example.model.Client;
 import com.example.model.Document;
 import com.example.service.ClientService;
 import com.example.service.DocumentService;
+import com.example.util.ClientErrorResponse;
 import com.example.util.ClientNotCreatedException;
 import jakarta.validation.Valid;
 import org.modelmapper.ModelMapper;
@@ -14,10 +15,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -61,6 +59,15 @@ public class ClientController {
         return ResponseEntity.ok(HttpStatus.OK);
     }
 
+    @ExceptionHandler
+    private ResponseEntity<ClientErrorResponse> handleException(ClientNotCreatedException e) {
+        ClientErrorResponse response = new ClientErrorResponse(
+                e.getMessage(),
+                System.currentTimeMillis()
+        );
+
+        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+    }
     private Client convertToClient(ClientDto clientDto) {
         return modelMapper.map(clientDto, Client.class);
     }

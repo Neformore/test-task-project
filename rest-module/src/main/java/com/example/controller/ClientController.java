@@ -1,12 +1,12 @@
-package com.example.restpart.controller;
+package com.example.controller;
 
-import com.example.restpart.dto.ClientDto;
-import com.example.restpart.dto.DocumentDto;
-import com.example.restpart.model.Client;
-import com.example.restpart.model.Document;
-import com.example.restpart.service.ClientService;
-import com.example.restpart.service.DocumentService;
-import com.example.restpart.util.ClientNotCreatedException;
+import com.example.dto.ClientDto;
+import com.example.dto.DocumentDto;
+import com.example.model.Client;
+import com.example.model.Document;
+import com.example.service.ClientService;
+import com.example.service.DocumentService;
+import com.example.util.ClientNotCreatedException;
 import jakarta.validation.Valid;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

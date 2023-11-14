@@ -1,6 +1,6 @@
-package com.example.restpart.service;
+package com.example.service;
 
-import com.example.restpart.model.Document;
+import com.example.model.Document;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.example.restpart.util;
+package com.example.util;
 
 public class ClientNotCreatedException extends RuntimeException {
 

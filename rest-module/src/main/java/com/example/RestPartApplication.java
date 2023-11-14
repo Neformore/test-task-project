@@ -1,4 +1,4 @@
-package com.example.restpart;
+package com.example;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,7 +59,7 @@ public class RestPartApplication {
 	public LocalSessionFactoryBean sessionFactory() {
 		LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
 		sessionFactory.setDataSource(dataSource());
-		sessionFactory.setPackagesToScan("com.example.restpart.model");
+		sessionFactory.setPackagesToScan("com.example.model");
 		sessionFactory.setHibernateProperties(hibernateProperties());
 
 		return sessionFactory;

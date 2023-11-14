@@ -1,6 +1,6 @@
-package com.example.restpart.dto;
+package com.example.dto;
 
-import com.example.restpart.model.enums.DocumentType;
+import com.example.model.enums.DocumentType;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import lombok.Data;

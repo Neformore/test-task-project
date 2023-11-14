@@ -1,6 +1,6 @@
-package com.example.restpart.model;
+package com.example.model;
 
-import com.example.restpart.model.enums.DocumentType;
+import com.example.model.enums.DocumentType;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;

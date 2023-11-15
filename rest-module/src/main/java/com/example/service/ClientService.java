@@ -35,6 +35,7 @@ public class ClientService {
         clientDao.save(client);
         documentDao.save(document);
 
+
     }
 
     private Client convertToClient(ClientDto clientDto) {

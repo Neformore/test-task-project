@@ -1,15 +1,10 @@
 package com.example.controller;
 
 import com.example.dto.ClientDto;
-import com.example.dto.DocumentDto;
-import com.example.model.Client;
-import com.example.model.Document;
 import com.example.service.ClientService;
-import com.example.service.DocumentService;
 import com.example.util.ClientErrorResponse;
 import com.example.util.ClientNotCreatedException;
 import jakarta.validation.Valid;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -19,13 +19,6 @@ import java.util.Properties;
 @SpringBootApplication(exclude =  HibernateJpaAutoConfiguration.class)
 public class RestPartApplication {
 
-	private final Environment environment;
-
-	@Autowired
-	public RestPartApplication(Environment environment) {
-		this.environment = environment;
-	}
-
 	public static void main(String[] args) {
 		SpringApplication.run(RestPartApplication.class, args);
 	}
@@ -35,41 +28,4 @@ public class RestPartApplication {
 		return new ModelMapper();
 	}
 
-	@Bean
-	public DataSource dataSource() {
-		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-
-		dataSource.setDriverClassName(Objects.requireNonNull(environment.getProperty("spring.datasource.driver-class-name")));
-		dataSource.setUrl(environment.getProperty("spring.datasource.url"));
-		dataSource.setUsername(environment.getProperty("spring.datasource.username"));
-		dataSource.setPassword(environment.getProperty("spring.datasource.password"));
-
-		return dataSource;
-	}
-
-	private Properties hibernateProperties() {
-		Properties properties = new Properties();
-		properties.put("hibernate.dialect", environment.getRequiredProperty("spring.jpa.properties.hibernate.dialect"));
-		properties.put("hibernate.show_sql", environment.getRequiredProperty("spring.jpa.properties.hibernate.show_sql"));
-
-		return properties;
-	}
-
-	@Bean(name="entityManagerFactory")
-	public LocalSessionFactoryBean sessionFactory() {
-		LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
-		sessionFactory.setDataSource(dataSource());
-		sessionFactory.setPackagesToScan("com.example.model");
-		sessionFactory.setHibernateProperties(hibernateProperties());
-
-		return sessionFactory;
-	}
-
-	@Bean
-	public PlatformTransactionManager hibernateTransactionManager() {
-		HibernateTransactionManager transactionManager = new HibernateTransactionManager();
-		transactionManager.setSessionFactory(sessionFactory().getObject());
-
-		return transactionManager;
-	}
 }

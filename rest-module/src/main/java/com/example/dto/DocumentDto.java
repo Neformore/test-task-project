@@ -15,9 +15,9 @@ public class DocumentDto {
     @Pattern(regexp = "[0-9]{6}", message = "Введен некорректный номер паспорта")
     private int number;
 
-    @NotNull
+    @NotNull(message = "issueDate is null")
     private String issueDate;
 
-    @NotNull
+    @NotNull(message = "type is null")
     private DocumentType type;
 }

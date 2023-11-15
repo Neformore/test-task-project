@@ -17,12 +17,12 @@ public class ClientDto {
     @Pattern(regexp = "[А-Я][а-я]+", message = "Введено некорректное отчество")
     private String patronymic;
 
-    @NotNull
+    @NotNull(message = "birthDate is null")
     private String birthDate;
 
-    @NotNull
+    @NotNull(message = "gender is null")
     private Gender gender;
 
-    @NotNull
+    @NotNull(message = "document is null")
     private DocumentDto document;
 }

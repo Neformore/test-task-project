@@ -25,13 +25,11 @@ public class ClientController {
 
     private final ClientService clientService;
     private final DocumentService documentService;
-    private final ModelMapper modelMapper;
 
     @Autowired
-    public ClientController(ClientService clientService, DocumentService documentService, ModelMapper modelMapper) {
+    public ClientController(ClientService clientService, DocumentService documentService) {
         this.clientService = clientService;
         this.documentService = documentService;
-        this.modelMapper = modelMapper;
     }
 
     @PostMapping("/add")
@@ -49,12 +47,7 @@ public class ClientController {
             throw new ClientNotCreatedException(errorMsg.toString());
         }
 
-        Client client = convertToClient(clientDto);
-        Document document = convertToDocument(clientDto.getDocument());
-        document.setClient(client);
-
-        clientService.save(client);
-        documentService.save(document);
+        clientService.saveAndSend(clientDto);
 
         return ResponseEntity.ok(HttpStatus.OK);
     }
@@ -67,12 +60,5 @@ public class ClientController {
         );
 
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
-    }
-    private Client convertToClient(ClientDto clientDto) {
-        return modelMapper.map(clientDto, Client.class);
-    }
-
-    private Document convertToDocument(DocumentDto documentDto) {
-        return modelMapper.map(documentDto, Document.class);
     }
 }

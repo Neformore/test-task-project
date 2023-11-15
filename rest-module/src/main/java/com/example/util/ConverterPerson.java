@@ -14,7 +14,7 @@ public class ConverterPerson extends WebServiceGatewaySupport {
         ConvertedXmlResponse response = (ConvertedXmlResponse) getWebServiceTemplate()
                 .marshalSendAndReceive("http://localhost:8081/service/convert",
                         request,
-                        new SoapActionCallback("http://www.soap-app.com/convertedXmlRequest"));
+                        new SoapActionCallback("http://www.soap-app.com/ConvertedXmlRequest"));
 
         return response;
     }

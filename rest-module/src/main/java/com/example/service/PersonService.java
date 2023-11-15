@@ -54,14 +54,15 @@ public class PersonService {
         xmlMapper.enable(SerializationFeature.INDENT_OUTPUT);
 
         try {
-            String xml = xmlMapper.writeValueAsString(personDto);
+            String xml = xmlMapper.writeValueAsString(person);
 
             ConvertedXmlResponse response = converterPerson.getConverted(xml);
 
-            JAXBContext jaxbContext = JAXBContext.newInstance(PersonDao.class);
+            JAXBContext jaxbContext = JAXBContext.newInstance(PersonDto.class);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
 
             PersonDto convertedPersonDto = (PersonDto) unmarshaller.unmarshal(new StringReader((response.getConvertedXmlText())));
+            Person convertedPerson = new ObjectMapper().convertValue(convertedPersonDto, Person.class);
         } catch (JsonProcessingException | JAXBException e) {
             throw new RuntimeException(e);
         }

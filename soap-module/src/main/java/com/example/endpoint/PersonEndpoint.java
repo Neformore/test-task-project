@@ -11,18 +11,18 @@ import com.soap_app.ConvertedXmlRequest;
 import com.soap_app.ConvertedXmlResponse;
 
 @Endpoint
-public class ClientEndpoint {
+public class PersonEndpoint {
 
     private final ConvertService convertService;
 
     @Autowired
-    public ClientEndpoint(ConvertService convertService) {
+    public PersonEndpoint(ConvertService convertService) {
         this.convertService = convertService;
     }
 
     @PayloadRoot(namespace = WebServiceConfig.NAMESPACE_URI, localPart = "convertedXmlRequest")
     @ResponsePayload
-    public ConvertedXmlResponse getClientInfo(@RequestPayload ConvertedXmlRequest request) {
+    public ConvertedXmlResponse getPersonInfo(@RequestPayload ConvertedXmlRequest request) {
         ConvertedXmlResponse response = new ConvertedXmlResponse();
         try {
             response.setConvertedXmlText(convertService.convertRequestToResponse(request.getSourceXmlText()));

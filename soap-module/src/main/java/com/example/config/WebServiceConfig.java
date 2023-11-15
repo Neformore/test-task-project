@@ -16,7 +16,7 @@ import org.springframework.xml.xsd.XsdSchema;
 @Configuration
 public class WebServiceConfig extends WsConfigurerAdapter {
 
-    public static final String NAMESPACE_URI = "http://www.soap-app.com";
+    public static final String NAMESPACE_URI = "http://www.soap-app.com/";
 
     @Bean
     public ServletRegistrationBean messageDispatcherServlet(ApplicationContext applicationContext) {

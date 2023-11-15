@@ -15,8 +15,8 @@ public class Document implements Serializable {
 
     @Id
     @OneToOne
-    @JoinColumn(name = "client_id", referencedColumnName = "id")
-    private Client client;
+    @JoinColumn(name = "person_id", referencedColumnName = "id")
+    private Person person;
 
     @Column(name = "series")
     private int series;

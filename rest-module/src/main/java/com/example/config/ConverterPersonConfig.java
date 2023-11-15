@@ -1,6 +1,6 @@
 package com.example.config;
 
-import com.example.util.ConverterClient;
+import com.example.util.ConverterPerson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,12 +8,12 @@ import org.springframework.core.env.Environment;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 
 @Configuration
-public class ConverterClientConfig {
+public class ConverterPersonConfig {
 
     private final Environment environment;
 
     @Autowired
-    public ConverterClientConfig(Environment environment) {
+    public ConverterPersonConfig(Environment environment) {
         this.environment = environment;
     }
 
@@ -25,8 +25,8 @@ public class ConverterClientConfig {
     }
 
     @Bean
-    public ConverterClient soapConverterClient(Jaxb2Marshaller marshaller) {
-        ConverterClient client = new ConverterClient();
+    public ConverterPerson converterClient(Jaxb2Marshaller marshaller) {
+        ConverterPerson client = new ConverterPerson();
         client.setDefaultUri(environment.getProperty("soap.uri"));
         client.setMarshaller(marshaller);
         client.setUnmarshaller(marshaller);

@@ -5,7 +5,7 @@ import com.example.wsdl.ConvertedXmlResponse;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 import org.springframework.ws.soap.client.core.SoapActionCallback;
 
-public class ConverterClient extends WebServiceGatewaySupport {
+public class ConverterPerson extends WebServiceGatewaySupport {
 
     public ConvertedXmlResponse getConverted(String xml) {
         ConvertedXmlRequest request = new ConvertedXmlRequest();

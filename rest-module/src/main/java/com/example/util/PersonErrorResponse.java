@@ -3,12 +3,12 @@ package com.example.util;
 import lombok.Data;
 
 @Data
-public class ClientErrorResponse {
+public class PersonErrorResponse {
 
     private String message;
     private long timestamp;
 
-    public ClientErrorResponse(String message, long timestamp) {
+    public PersonErrorResponse(String message, long timestamp) {
         this.message = message;
         this.timestamp = timestamp;
     }

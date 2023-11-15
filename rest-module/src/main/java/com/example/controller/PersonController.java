@@ -1,9 +1,9 @@
 package com.example.controller;
 
-import com.example.dto.ClientDto;
-import com.example.service.ClientService;
-import com.example.util.ClientErrorResponse;
-import com.example.util.ClientNotCreatedException;
+import com.example.dto.PersonDto;
+import com.example.service.PersonService;
+import com.example.util.PersonErrorResponse;
+import com.example.util.PersonNotCreatedException;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,19 +16,17 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/client")
-public class ClientController {
+public class PersonController {
 
-    private final ClientService clientService;
-    private final DocumentService documentService;
+    private final PersonService personService;
 
     @Autowired
-    public ClientController(ClientService clientService, DocumentService documentService) {
-        this.clientService = clientService;
-        this.documentService = documentService;
+    public PersonController(PersonService personService) {
+        this.personService = personService;
     }
 
     @PostMapping("/add")
-    public ResponseEntity<HttpStatus> create(@RequestBody @Valid ClientDto clientDto, BindingResult bindingResult) {
+    public ResponseEntity<HttpStatus> create(@RequestBody @Valid PersonDto personDto, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             StringBuilder errorMsg = new StringBuilder();
 
@@ -39,17 +37,17 @@ public class ClientController {
                         .append(error.getDefaultMessage())
                         .append(";");
             }
-            throw new ClientNotCreatedException(errorMsg.toString());
+            throw new PersonNotCreatedException(errorMsg.toString());
         }
 
-        clientService.saveAndSend(clientDto);
+        personService.saveAndSend(personDto);
 
         return ResponseEntity.ok(HttpStatus.OK);
     }
 
     @ExceptionHandler
-    private ResponseEntity<ClientErrorResponse> handleException(ClientNotCreatedException e) {
-        ClientErrorResponse response = new ClientErrorResponse(
+    private ResponseEntity<PersonErrorResponse> handleException(PersonNotCreatedException e) {
+        PersonErrorResponse response = new PersonErrorResponse(
                 e.getMessage(),
                 System.currentTimeMillis()
         );

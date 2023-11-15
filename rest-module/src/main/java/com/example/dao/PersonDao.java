@@ -1,23 +1,23 @@
 package com.example.dao;
 
-import com.example.model.Client;
+import com.example.model.Person;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ClientDao {
+public class PersonDao {
 
     private final SessionFactory sessionFactory;
 
     @Autowired
-    public ClientDao(SessionFactory sessionFactory) {
+    public PersonDao(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
 
-    public void save(Client client) {
+    public void save(Person person) {
         Session session = sessionFactory.getCurrentSession();
-        session.persist(client);
+        session.persist(person);
     }
 }

@@ -8,9 +8,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.util.Date;
 
 @Entity
-@Table(name = "client")
+@Table(name = "person")
 @Data
-public class Client {
+public class Person {
 
     @Id
     @Column(name = "id")
@@ -35,6 +35,6 @@ public class Client {
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    @OneToOne(mappedBy = "client")
+    @OneToOne(mappedBy = "person")
     private Document document;
 }

@@ -6,7 +6,7 @@ import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 
 @Data
-public class ClientDto {
+public class PersonDto {
 
     @Pattern(regexp = "[А-Я][а-я]+", message = "Введено некорректное имя")
     private String name;

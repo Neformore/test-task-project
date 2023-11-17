@@ -26,6 +26,7 @@ public class PersonEndpoint {
         ConvertedXmlResponse response = new ConvertedXmlResponse();
         try {
             response.setConvertedXmlText(convertService.convertRequestToResponse(request.getSourceXmlText()));
+            System.out.println();
         } catch (Exception e) {
             e.printStackTrace();
         }

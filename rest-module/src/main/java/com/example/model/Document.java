@@ -26,7 +26,7 @@ public class Document implements Serializable {
 
     @Column(name = "type")
     @Enumerated(EnumType.STRING)
-    private DocumentType documentType;
+    private DocumentType type;
 
     @Column(name = "issue_date")
     @Temporal(TemporalType.DATE)

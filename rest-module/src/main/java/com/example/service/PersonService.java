@@ -13,6 +13,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Unmarshaller;
 import org.modelmapper.ModelMapper;
@@ -54,7 +55,7 @@ public class PersonService {
         xmlMapper.enable(SerializationFeature.INDENT_OUTPUT);
 
         try {
-            String xml = xmlMapper.writeValueAsString(person);
+            String xml = xmlMapper.writeValueAsString(personDto);
 
             ConvertedXmlResponse response = converterPerson.getConverted(xml);
 
@@ -63,6 +64,7 @@ public class PersonService {
 
             PersonDto convertedPersonDto = (PersonDto) unmarshaller.unmarshal(new StringReader((response.getConvertedXmlText())));
             Person convertedPerson = new ObjectMapper().convertValue(convertedPersonDto, Person.class);
+            System.out.println();
         } catch (JsonProcessingException | JAXBException e) {
             throw new RuntimeException(e);
         }

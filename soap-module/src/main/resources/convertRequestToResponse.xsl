@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
     <xsl:template match="/*">
-        <xsl:element name="{name()}">
+        <person>
             <xsl:attribute name="name">
                 <xsl:value-of select="name"/>
             </xsl:attribute>
@@ -32,7 +32,7 @@
                     <xsl:value-of select="document/issueDate"/>
                 </xsl:attribute>
             </document>
-        </xsl:element>
+        </person>
     </xsl:template>
 
 

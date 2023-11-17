@@ -6,9 +6,8 @@ import jakarta.validation.constraints.Pattern;
 import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
-import lombok.Data;
 
-@XmlRootElement(name = "PersonDto")
+@XmlRootElement(name = "person")
 public class PersonDto {
 
     @Pattern(regexp = "[А-Я][а-я]+", message = "Введено некорректное имя")

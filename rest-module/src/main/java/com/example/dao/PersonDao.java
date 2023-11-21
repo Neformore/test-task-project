@@ -5,6 +5,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 @Component
 public class PersonDao {
@@ -16,6 +17,7 @@ public class PersonDao {
         this.sessionFactory = sessionFactory;
     }
 
+    @Transactional
     public void save(Person person) {
         Session session = sessionFactory.getCurrentSession();
         session.persist(person);

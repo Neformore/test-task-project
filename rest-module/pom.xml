@@ -64,24 +64,23 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.jvnet.jaxb2.maven2</groupId>
-                <artifactId>maven-jaxb2-plugin</artifactId>
-                <version>0.15.3</version>
+                <groupId>com.sun.xml.ws</groupId>
+                <artifactId>jaxws-maven-plugin</artifactId>
+                <version>4.0.1</version>
                 <executions>
                     <execution>
                         <goals>
-                            <goal>generate</goal>
+                            <goal>wsimport</goal>
                         </goals>
                     </execution>
                 </executions>
                 <configuration>
-                    <schemaLanguage>WSDL</schemaLanguage>
-                    <generatePackage>com.example.wsdl</generatePackage>
-                    <schemas>
-                        <schema>
-                            <url>http://localhost:8081/service/converterWsdl.wsdl</url>
-                        </schema>
-                    </schemas>
+                    <wsdlUrls>
+                        <wsdlUrl>http://localhost:8081/service/converterWsdl.wsdl</wsdlUrl>
+                    </wsdlUrls>
+                    <sourceDestDir>
+                        ${project.basedir}/src/main/java/com/example/wsdl
+                    </sourceDestDir>
                 </configuration>
             </plugin>
         </plugins>

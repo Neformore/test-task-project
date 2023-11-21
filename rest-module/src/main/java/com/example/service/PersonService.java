@@ -7,7 +7,7 @@ import com.example.dto.DocumentDto;
 import com.example.model.Person;
 import com.example.model.Document;
 import com.example.util.ConverterPerson;
-import com.example.wsdl.ConvertedXmlResponse;
+import com.example.wsdl.com.soap_app.ConvertedXmlResponse;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -25,7 +25,6 @@ import java.io.StringReader;
 import java.text.SimpleDateFormat;
 
 @Service
-@Transactional(readOnly = true)
 @Slf4j
 public class PersonService {
 
@@ -42,34 +41,42 @@ public class PersonService {
         this.converterPerson = converterPerson;
     }
 
-    @Transactional
     public void saveAndSend(PersonDto personDto) {
-        Person person = convertToClient(personDto);
-        Document document = convertToDocument(personDto.getDocument());
-        document.setPerson(person);
-
-        personDao.save(person);
-        documentDao.save(document);
+        log.info("Сохранение в БД №1");
+        save(personDto);
 
         ObjectMapper xmlMapper = new XmlMapper();
         xmlMapper.setDateFormat(new SimpleDateFormat("yyyy-MM-dd"));
         xmlMapper.enable(SerializationFeature.INDENT_OUTPUT);
 
         try {
+            log.info("Конвертация объекта в xml");
             String xml = xmlMapper.writeValueAsString(personDto);
 
+            log.info("Отправка и получение ответа");
             ConvertedXmlResponse response = converterPerson.getConverted(xml);
 
             JAXBContext jaxbContext = JAXBContext.newInstance(PersonDto.class);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
 
+            log.info("Собираем объект из полученного ответа");
             PersonDto convertedPersonDto = (PersonDto) unmarshaller.unmarshal(new StringReader((response.getConvertedXmlText())));
-            Person convertedPerson = new ObjectMapper().convertValue(convertedPersonDto, Person.class);
-            System.out.println();
+
+            log.info("Сохранение в БД №2");
+            save(convertedPersonDto);
         } catch (JsonProcessingException | JAXBException e) {
             log.error("Выброшено исключение: ",e);
             throw new RuntimeException(e);
         }
+    }
+
+    public void save(PersonDto personDto) {
+        Person person = convertToClient(personDto);
+        Document document = convertToDocument(personDto.getDocument());
+        document.setPerson(person);
+
+        personDao.save(person);
+        documentDao.save(document);
     }
 
     private Person convertToClient(PersonDto personDto) {

@@ -20,5 +20,4 @@ create table document
     number     int         not null,
     type       varchar(25) not null,
     issue_date date        not null,
-    unique (series, number, type)
 );

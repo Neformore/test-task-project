@@ -2,14 +2,14 @@ package com.example.endpoint;
 
 import com.example.config.WebServiceConfig;
 import com.example.service.ConvertService;
+import com.example.wsdl.com.soap_app.ConvertedXmlRequest;
+import com.example.wsdl.com.soap_app.ConvertedXmlResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
-import com.soap_app.ConvertedXmlRequest;
-import com.soap_app.ConvertedXmlResponse;
 
 @Endpoint
 @Slf4j

@@ -30,7 +30,7 @@ public class PersonController {
 
     @PostMapping("/add")
     public ResponseEntity<HttpStatus> create(@RequestBody @Valid PersonDto personDto, BindingResult bindingResult) {
-        log.info("Начало работы...");
+        log.info("Начало работы");
         if (bindingResult.hasErrors()) {
             StringBuilder errorMsg = new StringBuilder();
 
@@ -42,12 +42,12 @@ public class PersonController {
                         .append(";");
             }
 
-            log.info("Ошибка {}", errorMsg);
+            log.info("Ошибка " + errorMsg);
             throw new PersonNotCreatedException(errorMsg.toString());
         }
 
         personService.saveAndSend(personDto);
-        log.info("Конвертация пройдена успешно!");
+        log.info("Успешно!");
 
         return ResponseEntity.ok(HttpStatus.OK);
     }

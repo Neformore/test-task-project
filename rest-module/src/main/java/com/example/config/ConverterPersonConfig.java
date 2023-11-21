@@ -20,7 +20,7 @@ public class ConverterPersonConfig {
     @Bean
     public Jaxb2Marshaller marshaller() {
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
-        marshaller.setContextPath("com.example.wsdl");
+        marshaller.setContextPath("com.example.wsdl.com.soap_app");
         return marshaller;
     }
 

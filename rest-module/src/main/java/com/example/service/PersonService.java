@@ -41,7 +41,7 @@ public class PersonService {
         this.converterPerson = converterPerson;
     }
 
-    public void saveAndSend(PersonDto personDto) {
+    public String saveAndSend(PersonDto personDto) {
         log.info("Сохранение в БД №1");
         save(personDto);
 
@@ -64,6 +64,7 @@ public class PersonService {
 
             log.info("Сохранение в БД №2");
             save(convertedPersonDto);
+            return response.getConvertedXmlText();
         } catch (JsonProcessingException | JAXBException e) {
             log.error("Выброшено исключение: ",e);
             throw new RuntimeException(e);

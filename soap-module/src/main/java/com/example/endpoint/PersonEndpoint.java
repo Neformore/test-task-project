@@ -2,6 +2,7 @@ package com.example.endpoint;
 
 import com.example.config.WebServiceConfig;
 import com.example.service.ConvertService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
@@ -11,6 +12,7 @@ import com.soap_app.ConvertedXmlRequest;
 import com.soap_app.ConvertedXmlResponse;
 
 @Endpoint
+@Slf4j
 public class PersonEndpoint {
 
     private final ConvertService convertService;
@@ -23,11 +25,12 @@ public class PersonEndpoint {
     @PayloadRoot(namespace = WebServiceConfig.NAMESPACE_URI, localPart = "convertedXmlRequest")
     @ResponsePayload
     public ConvertedXmlResponse getPersonInfo(@RequestPayload ConvertedXmlRequest request) {
+        log.info("Начало конвертации");
         ConvertedXmlResponse response = new ConvertedXmlResponse();
         try {
             response.setConvertedXmlText(convertService.convertRequestToResponse(request.getSourceXmlText()));
-            System.out.println();
         } catch (Exception e) {
+            log.error("Выброшено исключение: ", e);
             e.printStackTrace();
         }
         return response;

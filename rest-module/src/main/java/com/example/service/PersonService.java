@@ -13,9 +13,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import jakarta.xml.bind.JAXBContext;
-import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Unmarshaller;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,6 +26,7 @@ import java.text.SimpleDateFormat;
 
 @Service
 @Transactional(readOnly = true)
+@Slf4j
 public class PersonService {
 
     private final PersonDao personDao;
@@ -66,6 +67,7 @@ public class PersonService {
             Person convertedPerson = new ObjectMapper().convertValue(convertedPersonDto, Person.class);
             System.out.println();
         } catch (JsonProcessingException | JAXBException e) {
+            log.error("Выброшено исключение: ",e);
             throw new RuntimeException(e);
         }
     }

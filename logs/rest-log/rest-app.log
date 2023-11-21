@@ -1,83 +1,65 @@
-"2023-11-20 16:44:57 [main] INFO  com.example.RestPartApplication - Starting RestPartApplication using Java 21.0.1 with PID 3128 (C:\Users\kuzebenko\IdeaProjects\task-project\rest-module\target\classes started by kozubenko in C:\Users\kuzebenko\IdeaProjects\task-project)
-""2023-11-20 16:44:57 [main] INFO  com.example.RestPartApplication - No active profile set, falling back to 1 default profile: "default"
-""2023-11-20 16:44:58 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-""2023-11-20 16:44:58 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
-""2023-11-20 16:44:58 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-""2023-11-20 16:44:58 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-""2023-11-20 16:44:58 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-""2023-11-20 16:44:58 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-""2023-11-20 16:44:58 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
-""2023-11-20 16:44:58 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-""2023-11-20 16:44:58 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1305 ms
-""2023-11-20 16:44:59 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
-""2023-11-20 16:44:59 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
-""2023-11-20 16:44:59 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-""2023-11-20 16:45:00 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-""2023-11-20 16:45:00 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-""2023-11-20 16:45:01 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-""2023-11-20 16:45:01 [main] INFO  com.example.RestPartApplication - Started RestPartApplication in 4.072 seconds (process running for 4.723)
-""2023-11-20 17:07:59 [main] INFO  com.example.RestPartApplication - Starting RestPartApplication using Java 21.0.1 with PID 6544 (C:\Users\kuzebenko\IdeaProjects\task-project\rest-module\target\classes started by kozubenko in C:\Users\kuzebenko\IdeaProjects\task-project)
-""2023-11-20 17:07:59 [main] INFO  com.example.RestPartApplication - No active profile set, falling back to 1 default profile: "default"
-""2023-11-20 17:08:00 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-""2023-11-20 17:08:00 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
-""2023-11-20 17:08:00 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-""2023-11-20 17:08:00 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-""2023-11-20 17:08:01 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-""2023-11-20 17:08:01 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-""2023-11-20 17:08:01 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
-""2023-11-20 17:08:01 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-""2023-11-20 17:08:01 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1369 ms
-""2023-11-20 17:08:01 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
-""2023-11-20 17:08:01 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
-""2023-11-20 17:08:01 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-""2023-11-20 17:08:03 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-""2023-11-20 17:08:03 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-""2023-11-20 17:08:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-""2023-11-20 17:08:03 [main] INFO  com.example.RestPartApplication - Started RestPartApplication in 4.139 seconds (process running for 4.787)
-""2023-11-20 17:08:43 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-""2023-11-20 17:08:43 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-""2023-11-20 17:08:43 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-""2023-11-20 17:08:43 [http-nio-8080-exec-1] INFO  c.e.controller.PersonController - Начало работы...
-""2023-11-20 17:08:44 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.ws.client.WebServiceIOException: I/O error: Connection refused: no further information] with root cause
-"java.net.ConnectException: Connection refused: no further information
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
-	at java.base/java.net.Socket.connect(Socket.java:751)
-	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
-	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:531)
-	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:636)
-	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280)
-	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:386)
-	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:408)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1304)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1237)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1123)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1052)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1446)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1417)
-	at org.springframework.ws.transport.http.HttpUrlConnection.getRequestOutputStream(HttpUrlConnection.java:89)
-	at org.springframework.ws.transport.AbstractSenderConnection$RequestTransportOutputStream.createOutputStream(AbstractSenderConnection.java:85)
-	at org.springframework.ws.transport.TransportOutputStream.getOutputStream(TransportOutputStream.java:40)
-	at org.springframework.ws.transport.TransportOutputStream.write(TransportOutputStream.java:67)
-	at com.sun.xml.messaging.saaj.soap.MessageImpl.writeTo(MessageImpl.java:1395)
-	at org.springframework.ws.soap.saaj.SaajSoapMessage.writeTo(SaajSoapMessage.java:246)
-	at org.springframework.ws.transport.AbstractWebServiceConnection.send(AbstractWebServiceConnection.java:46)
-	at org.springframework.ws.client.core.WebServiceTemplate.sendRequest(WebServiceTemplate.java:627)
-	at org.springframework.ws.client.core.WebServiceTemplate.doSendAndReceive(WebServiceTemplate.java:585)
-	at org.springframework.ws.client.core.WebServiceTemplate.sendAndReceive(WebServiceTemplate.java:539)
-	at org.springframework.ws.client.core.WebServiceTemplate.marshalSendAndReceive(WebServiceTemplate.java:391)
-	at com.example.util.ConverterPerson.getConverted(ConverterPerson.java:15)
-	at com.example.service.PersonService.saveAndSend(PersonService.java:60)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751)
-	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391)
+"2023-11-21 14:58:27 [main] INFO  com.example.RestPartApplication - Starting RestPartApplication using Java 21.0.1 with PID 3384 (C:\Users\kuzebenko\IdeaProjects\task-project\rest-module\target\classes started by kozubenko in C:\Users\kuzebenko\IdeaProjects\task-project)
+""2023-11-21 14:58:27 [main] INFO  com.example.RestPartApplication - No active profile set, falling back to 1 default profile: "default"
+""2023-11-21 14:58:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2023-11-21 14:58:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 JPA repository interfaces.
+""2023-11-21 14:58:28 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2023-11-21 14:58:29 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+""2023-11-21 14:58:29 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+""2023-11-21 14:58:29 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2023-11-21 14:58:29 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+""2023-11-21 14:58:29 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+""2023-11-21 14:58:29 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1984 ms
+""2023-11-21 14:58:29 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+""2023-11-21 14:58:29 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+""2023-11-21 14:58:30 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+""2023-11-21 14:58:32 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+""2023-11-21 14:58:32 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+""2023-11-21 14:58:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+""2023-11-21 14:58:32 [main] INFO  com.example.RestPartApplication - Started RestPartApplication in 5.829 seconds (process running for 7.111)
+""2023-11-21 14:59:21 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2023-11-21 14:59:21 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2023-11-21 14:59:21 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+""2023-11-21 14:59:21 [http-nio-8080-exec-2] INFO  c.e.controller.PersonController - Начало работы...
+""2023-11-21 14:59:22 [http-nio-8080-exec-2] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505
+""2023-11-21 14:59:22 [http-nio-8080-exec-2] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "document_series_number_type_key"
+  Подробности: Ключ "(series, number, type)=(1333, 112233, PASSPORT)" уже существует.
+""2023-11-21 14:59:22 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: could not execute statement [ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "document_series_number_type_key"
+  Подробности: Ключ "(series, number, type)=(1333, 112233, PASSPORT)" уже существует.] [insert into document (issue_date,number,series,type,person_id) values (?,?,?,?,?)]; SQL [insert into document (issue_date,number,series,type,person_id) values (?,?,?,?,?)]; constraint [null]] with root cause
+"org.postgresql.util.PSQLException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "document_series_number_type_key"
+  Подробности: Ключ "(series, number, type)=(1333, 112233, PASSPORT)" уже существует.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:152)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:275)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:107)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:40)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:52)
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.doStaticInserts(InsertCoordinator.java:171)
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.coordinateInsert(InsertCoordinator.java:112)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2785)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:102)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:635)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:502)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:364)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1412)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:485)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2301)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1966)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:439)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:169)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:267)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.hibernate5.HibernateTransactionManager.doCommit(HibernateTransactionManager.java:650)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:660)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:410)
 	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751)
@@ -136,68 +118,68 @@
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-"2023-11-20 17:09:15 [main] INFO  com.example.RestPartApplication - Starting RestPartApplication using Java 21.0.1 with PID 14696 (C:\Users\kuzebenko\IdeaProjects\task-project\rest-module\target\classes started by kozubenko in C:\Users\kuzebenko\IdeaProjects\task-project)
-""2023-11-20 17:09:15 [main] INFO  com.example.RestPartApplication - No active profile set, falling back to 1 default profile: "default"
-""2023-11-20 17:09:16 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-""2023-11-20 17:09:16 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
-""2023-11-20 17:09:16 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-""2023-11-20 17:09:16 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-""2023-11-20 17:09:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-""2023-11-20 17:09:16 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-""2023-11-20 17:09:16 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
-""2023-11-20 17:09:16 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-""2023-11-20 17:09:16 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1380 ms
-""2023-11-20 17:09:16 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
-""2023-11-20 17:09:16 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
-""2023-11-20 17:09:17 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-""2023-11-20 17:09:18 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-""2023-11-20 17:09:18 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-""2023-11-20 17:09:19 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-""2023-11-20 17:09:19 [main] INFO  com.example.RestPartApplication - Started RestPartApplication in 4.509 seconds (process running for 5.207)
-""2023-11-20 17:09:22 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-""2023-11-20 17:09:22 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-""2023-11-20 17:09:22 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-""2023-11-20 17:09:22 [http-nio-8080-exec-2] INFO  c.e.controller.PersonController - Начало работы...
-""2023-11-20 17:09:23 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.ws.client.WebServiceIOException: I/O error: Connection refused: no further information] with root cause
-"java.net.ConnectException: Connection refused: no further information
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
-	at java.base/java.net.Socket.connect(Socket.java:751)
-	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
-	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:531)
-	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:636)
-	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280)
-	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:386)
-	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:408)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1304)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1237)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1123)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1052)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1446)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1417)
-	at org.springframework.ws.transport.http.HttpUrlConnection.getRequestOutputStream(HttpUrlConnection.java:89)
-	at org.springframework.ws.transport.AbstractSenderConnection$RequestTransportOutputStream.createOutputStream(AbstractSenderConnection.java:85)
-	at org.springframework.ws.transport.TransportOutputStream.getOutputStream(TransportOutputStream.java:40)
-	at org.springframework.ws.transport.TransportOutputStream.write(TransportOutputStream.java:67)
-	at com.sun.xml.messaging.saaj.soap.MessageImpl.writeTo(MessageImpl.java:1395)
-	at org.springframework.ws.soap.saaj.SaajSoapMessage.writeTo(SaajSoapMessage.java:246)
-	at org.springframework.ws.transport.AbstractWebServiceConnection.send(AbstractWebServiceConnection.java:46)
-	at org.springframework.ws.client.core.WebServiceTemplate.sendRequest(WebServiceTemplate.java:627)
-	at org.springframework.ws.client.core.WebServiceTemplate.doSendAndReceive(WebServiceTemplate.java:585)
-	at org.springframework.ws.client.core.WebServiceTemplate.sendAndReceive(WebServiceTemplate.java:539)
-	at org.springframework.ws.client.core.WebServiceTemplate.marshalSendAndReceive(WebServiceTemplate.java:391)
-	at com.example.util.ConverterPerson.getConverted(ConverterPerson.java:15)
-	at com.example.service.PersonService.saveAndSend(PersonService.java:60)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751)
-	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391)
+"2023-11-21 15:18:02 [main] INFO  com.example.RestPartApplication - Starting RestPartApplication using Java 21.0.1 with PID 15196 (C:\Users\kuzebenko\IdeaProjects\task-project\rest-module\target\classes started by kozubenko in C:\Users\kuzebenko\IdeaProjects\task-project)
+""2023-11-21 15:18:02 [main] INFO  com.example.RestPartApplication - No active profile set, falling back to 1 default profile: "default"
+""2023-11-21 15:18:03 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2023-11-21 15:18:03 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+""2023-11-21 15:18:03 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2023-11-21 15:18:04 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+""2023-11-21 15:18:04 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+""2023-11-21 15:18:04 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""2023-11-21 15:18:04 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+""2023-11-21 15:18:04 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+""2023-11-21 15:18:04 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1496 ms
+""2023-11-21 15:18:04 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+""2023-11-21 15:18:04 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+""2023-11-21 15:18:05 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+""2023-11-21 15:18:06 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+""2023-11-21 15:18:06 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+""2023-11-21 15:18:06 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+""2023-11-21 15:18:06 [main] INFO  com.example.RestPartApplication - Started RestPartApplication in 4.27 seconds (process running for 5.038)
+""2023-11-21 15:18:08 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2023-11-21 15:18:08 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2023-11-21 15:18:08 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+""2023-11-21 15:18:09 [http-nio-8080-exec-1] INFO  c.e.controller.PersonController - Начало работы...
+""2023-11-21 15:18:09 [http-nio-8080-exec-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505
+""2023-11-21 15:18:09 [http-nio-8080-exec-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "document_series_number_type_key"
+  Подробности: Ключ "(series, number, type)=(1333, 112233, PASSPORT)" уже существует.
+""2023-11-21 15:18:09 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: could not execute statement [ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "document_series_number_type_key"
+  Подробности: Ключ "(series, number, type)=(1333, 112233, PASSPORT)" уже существует.] [insert into document (issue_date,number,series,type,person_id) values (?,?,?,?,?)]; SQL [insert into document (issue_date,number,series,type,person_id) values (?,?,?,?,?)]; constraint [null]] with root cause
+"org.postgresql.util.PSQLException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "document_series_number_type_key"
+  Подробности: Ключ "(series, number, type)=(1333, 112233, PASSPORT)" уже существует.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:152)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:275)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:107)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:40)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:52)
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.doStaticInserts(InsertCoordinator.java:171)
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.coordinateInsert(InsertCoordinator.java:112)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2785)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:102)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:635)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:502)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:364)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1412)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:485)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2301)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1966)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:439)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:169)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:267)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.hibernate5.HibernateTransactionManager.doCommit(HibernateTransactionManager.java:650)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:660)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:410)
 	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751)

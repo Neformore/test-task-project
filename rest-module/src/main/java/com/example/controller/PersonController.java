@@ -47,7 +47,7 @@ public class PersonController {
         }
 
         personService.saveAndSend(personDto);
-        log.info("Конвертация пройдена успешно");
+        log.info("Конвертация пройдена успешно!");
 
         return ResponseEntity.ok(HttpStatus.OK);
     }

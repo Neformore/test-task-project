@@ -1,5 +1,6 @@
 package com.example.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +15,7 @@ import java.io.StringReader;
 import java.io.StringWriter;
 
 @Service
+@Slf4j
 public class ConvertService {
 
     public String convertRequestToResponse(String requestXml) {
@@ -28,8 +30,10 @@ public class ConvertService {
             StringWriter resultWriter = new StringWriter();
             transformer.transform(xsltSource, new StreamResult(resultWriter));
 
+            log.info("Конвертация завершена успешно!");
             return resultWriter.toString();
         } catch (TransformerException | IOException e) {
+            log.error("Выброшено исключение: ", e);
             e.printStackTrace();
             return null;
         }

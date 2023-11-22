@@ -29,7 +29,7 @@ public class PersonController {
     }
 
     @PostMapping("/add")
-    public String create(@RequestBody @Valid PersonDto personDto, BindingResult bindingResult) {
+    public ResponseEntity<String> create(@RequestBody @Valid PersonDto personDto, BindingResult bindingResult) {
         log.info("Начало работы");
         if (bindingResult.hasErrors()) {
             StringBuilder errorMsg = new StringBuilder();
@@ -49,7 +49,7 @@ public class PersonController {
         String response = personService.saveAndSend(personDto);
         log.info("Успешно!");
 
-        return response;
+        return ResponseEntity.ok(response);
     }
 
     @ExceptionHandler

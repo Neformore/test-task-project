@@ -30,8 +30,7 @@ public class PersonEndpoint {
         try {
             response.setConvertedXmlText(convertService.convertRequestToResponse(request.getSourceXmlText()));
         } catch (Exception e) {
-            log.error("Выброшено исключение: ", e);
-            e.printStackTrace();
+            log.error("Выброшено исключение: {}", e.getMessage(), e);
         }
         return response;
     }

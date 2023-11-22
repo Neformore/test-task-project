@@ -2,6 +2,7 @@ package com.example.controller;
 
 import com.example.dto.PersonDto;
 import com.example.service.PersonService;
+import com.example.util.PersonConvertException;
 import com.example.util.PersonErrorResponse;
 import com.example.util.PersonNotCreatedException;
 import jakarta.validation.Valid;
@@ -42,7 +43,7 @@ public class PersonController {
                         .append(";");
             }
 
-            log.info("Ошибка " + errorMsg);
+            log.error("Ошибка {}", errorMsg);
             throw new PersonNotCreatedException(errorMsg.toString());
         }
 
@@ -53,7 +54,17 @@ public class PersonController {
     }
 
     @ExceptionHandler
-    private ResponseEntity<PersonErrorResponse> handleException(PersonNotCreatedException e) {
+    private ResponseEntity<PersonErrorResponse> handleCreatedException(PersonNotCreatedException e) {
+        PersonErrorResponse response = new PersonErrorResponse(
+                e.getMessage(),
+                System.currentTimeMillis()
+        );
+
+        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler
+    private ResponseEntity<PersonErrorResponse> handleConvertException(PersonConvertException e) {
         PersonErrorResponse response = new PersonErrorResponse(
                 e.getMessage(),
                 System.currentTimeMillis()

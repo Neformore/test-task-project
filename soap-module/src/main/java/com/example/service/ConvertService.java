@@ -31,8 +31,7 @@ public class ConvertService {
             log.info("Конвертация завершена успешно!");
             return resultWriter.toString();
         } catch (TransformerException | IOException e) {
-            log.error("Выброшено исключение: ", e);
-            e.printStackTrace();
+            log.error("Выброшено исключение: {}", e.getMessage(), e);
             return null;
         }
     }

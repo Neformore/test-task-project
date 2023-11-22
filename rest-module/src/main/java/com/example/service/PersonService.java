@@ -7,6 +7,9 @@ import com.example.dto.DocumentDto;
 import com.example.model.Person;
 import com.example.model.Document;
 import com.example.util.ConverterPerson;
+import com.example.util.PersonConvertException;
+import com.example.util.PersonErrorResponse;
+import com.example.util.PersonNotCreatedException;
 import com.example.wsdl.ConvertedXmlResponse;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -18,7 +21,10 @@ import jakarta.xml.bind.Unmarshaller;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import java.io.StringReader;
 import java.text.SimpleDateFormat;
@@ -63,10 +69,11 @@ public class PersonService {
 
             log.info("Сохранение в БД №2");
             save(convertedPersonDto);
+
             return response.getConvertedXmlText();
         } catch (JsonProcessingException | JAXBException e) {
-            log.error("Выброшено исключение: ",e);
-            throw new RuntimeException(e);
+            log.error("Выброшено исключение: {}", e.getMessage(), e);
+            throw new PersonConvertException(e.getMessage());
         }
     }
 

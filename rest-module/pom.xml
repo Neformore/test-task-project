@@ -79,8 +79,9 @@
                         <wsdlUrl>http://localhost:8081/service/converterWsdl.wsdl</wsdlUrl>
                     </wsdlUrls>
                     <sourceDestDir>
-                        ${project.basedir}/src/main/java/com/example/wsdl
+                        ${project.basedir}/src/main/java/
                     </sourceDestDir>
+                    <packageName>com.example.wsdl</packageName>
                 </configuration>
             </plugin>
         </plugins>

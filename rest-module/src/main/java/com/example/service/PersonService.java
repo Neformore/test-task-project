@@ -7,7 +7,7 @@ import com.example.dto.DocumentDto;
 import com.example.model.Person;
 import com.example.model.Document;
 import com.example.util.ConverterPerson;
-import com.example.wsdl.com.soap_app.ConvertedXmlResponse;
+import com.example.wsdl.ConvertedXmlResponse;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;

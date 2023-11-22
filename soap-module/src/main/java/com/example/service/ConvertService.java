@@ -4,10 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 
-import javax.xml.transform.Source;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.*;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 import java.io.IOException;
@@ -25,6 +22,7 @@ public class ConvertService {
             Source xslt = new StreamSource(new ClassPathResource("convertRequestToResponse.xsl").getInputStream());
 
             Transformer transformer = transformerFactory.newTransformer(xslt);
+            transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
 
             Source xsltSource = new StreamSource(new StringReader(requestXml));
             StringWriter resultWriter = new StringWriter();

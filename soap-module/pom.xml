@@ -68,8 +68,9 @@
                     <sources>
                         <source>${project.basedir}/src/main/resources/converter.xsd</source>
                     </sources>
-                    <outputDirectory>src/main/java/com/example/wsdl</outputDirectory>
+                    <outputDirectory>src/main/java/</outputDirectory>
                     <clearOutputDir>false</clearOutputDir>
+                    <packageName>com.example.wsdl</packageName>
                 </configuration>
             </plugin>
         </plugins>

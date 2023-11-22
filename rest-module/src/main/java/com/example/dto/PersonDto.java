@@ -3,11 +3,10 @@ package com.example.dto;
 import com.example.model.enums.Gender;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
-import jakarta.xml.bind.annotation.XmlAttribute;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.*;
 
 @XmlRootElement(name = "person")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class PersonDto {
 
     @Pattern(regexp = "[А-Я][а-я]+", message = "Введено некорректное имя")

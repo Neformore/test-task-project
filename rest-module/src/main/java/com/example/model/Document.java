@@ -14,7 +14,7 @@ import java.util.Date;
 public class Document implements Serializable {
 
     @Id
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "person_id", referencedColumnName = "id")
     private Person person;
 

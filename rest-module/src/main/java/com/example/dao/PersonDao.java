@@ -17,6 +17,7 @@ public class PersonDao {
         this.sessionFactory = sessionFactory;
     }
 
+
     @Transactional
     public void save(Person person) {
         Session session = sessionFactory.getCurrentSession();
